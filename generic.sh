@@ -13,12 +13,14 @@ test_exists $1.c
 test_exists $1.h
 cp /home/lawrence/workspace/c/generic/Makefile Makefile
 cp /home/lawrence/workspace/c/generic/GENERIC.c $1.c
-cp /home/lawrence/workspace/c/generic/GENERIC.h $1.h
+cp /home/lawrence/workspace/c/generic/GENERIC-lib.c $1-lib.c
+cp /home/lawrence/workspace/c/generic/GENERIC-lib.h $1-lib.h
 cp /home/lawrence/workspace/c/generic/.ycm_extra_conf.py .ycm_extra_conf.py
 cp /home/lawrence/workspace/c/generic/.gitignore .gitignore
 sed -i "s/GENERIC/$1/g" Makefile
+sed -i "s/GENERIC-lib/$1-lib/g" $1-lib.c
+sed -i "s/GENERIC-lib/$1-lib/g" $1-lib.h
 sed -i "s/GENERIC/$1/g" $1.c
-sed -i "s/GENERIC/$1/g" $1.h
 echo "created folder $1"
 
 

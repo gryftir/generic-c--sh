@@ -1,5 +1,5 @@
 /*GENERIC c file*/
-#include "GENERIC.h"
+#include "GENERIC-lib.h"
 
 
 int main(int argc, char *argv[])
