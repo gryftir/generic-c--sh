@@ -14,14 +14,17 @@ $(P): $(OBJECTS)
 $(TESTS): $(OBJECTS)
 
 .PHONY: test
-test: $(TESTS)
+test:  $(TESTS)
 	gtester --verbose $(TESTS)	
 	echo ' '
 	valgrind $(TESTS)
+	rm $(TESTS)
+
 
 .PHONY: clean
 clean: 
 	rm $(OBJECTS)
+
 
 
 

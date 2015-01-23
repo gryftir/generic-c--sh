@@ -6,7 +6,6 @@ test_exists() {
     fi
     return 0
 }
-
 test_exists $1 "folder"
 mkdir $1
 cd $1
