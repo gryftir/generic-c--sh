@@ -21,7 +21,7 @@ cp ${SCRIPT_DIR}/.ycm_extra_conf.py .ycm_extra_conf.py
 cp ${SCRIPT_DIR}/.gitignore .gitignore
 mkdir test
 cp ${SCRIPT_DIR}/test.c "test/${1}-test.c"
-sed -i "s/GENERIC/$1/g" Makefile "$1-lib.c" "$1-lib.h" "$1.c" "test/${1}-test.c"
+sed -i "s/GENERIC/$1/g" Makefile "$1-lib.c" "$1-lib.h" "$1.c" "test/${1}-test.c" ".gitignore"
 sed -i "s/YEAR/`date +%Y`/" LICENSE
 echo "created folder $1"
 echo "current directory: `pwd`"
