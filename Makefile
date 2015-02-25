@@ -4,7 +4,7 @@ CFILES:=$(wildcard *-lib.c)
 P=GENERIC
 OBJECTS=$(patsubst %.c, %.o, $(CFILES))
 CFLAGS=`pkg-config --cflags glib-2.0` -g -Wall -std=gnu11 -O3
-LDLIBS=`pkg-config --libs glib-2.0`
+LDLIBS=`pkg-config --libs glib-2.0` -lm
 CC=cc
 TEST_SRC=$(wildcard test/*test.c)
 TESTS=$(patsubst %.c,%,$(TEST_SRC))
