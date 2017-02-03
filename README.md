@@ -1,5 +1,11 @@
 # Installation
 
+Assumes gnu sed, on Mac Os X you can install with  
+
+````bash
+brew install gnu-sed --with-default-names
+```
+
 add the following to your .bashrc, with the path replaced appropriately, and source it
 
 ```bash
@@ -12,4 +18,4 @@ make_c() {
       cd $1
     fi
 }
-```bash
+```
