@@ -18,4 +18,4 @@ make_c() {
       cd $1
     fi
 }
-```bash
+```
